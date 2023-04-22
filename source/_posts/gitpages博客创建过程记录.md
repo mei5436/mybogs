@@ -3,16 +3,16 @@ title: gitpages博客创建过程记录
 date: 2023-04-09 22:08:51
 tags:
 ---
-##我的博客：
+## My Bogs：
 
 访问地址：
 https://mei5436.github.io/
 博客代码：
 https://github.com/mei5436/mybogs
 
-##GitPage教程：
+## GitPage教程：
 
-###1. 安装git并进行设置：
+### 1. 安装git并进行设置：
 设置user.name和user.email配置信息：
 ``` bash
 git config --global user.name "你的GitHub用户名"
@@ -24,21 +24,21 @@ ssh-keygen -t rsa -C "你的GitHub注册邮箱"
 ``` 
 然后直接三个回车即可，默认不需要设置密码
 然后找到生成的.ssh的文件夹中的id_rsa.pub密钥，将内容全部复制
-![](gitpages博客创建过程记录/.ssh_img.png)
+![.ssh_img.png](gitpages博客创建过程记录/.ssh_img.png)
 打开GitHub_Settings_keys 页面，新建new SSH Key
-![](gitpages博客创建过程记录/GitHub_Settings_keys.png)
+![GitHub_Settings_keys.png](gitpages博客创建过程记录/GitHub_Settings_keys.png)
 
 
-###2.创建GitHub GitPage
+### 2.创建GitHub GitPage
 点击GitHub中的New repository创建新仓库，仓库名应该为：用户名.http://github.io 这个用户名使用你的GitHub帐号名称代替，这是固定写法.
 
-##hexo教程：
-###hexo概述：
+## hexo教程：
+### hexo概述：
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
 ## Quick Start
 
-###安装软件与准备工作：
+### 安装软件与准备工作：
 
 安装nodejs，hexo：
 使用npm命令安装Hexo，输入：
@@ -60,6 +60,22 @@ $ hexo new "My New Post"
 ```
 简写：hexo n
 More info: [Writing](https://hexo.io/docs/writing.html)
+
+### Hexo 插件安装
+安装 hexo-renderer-marked
+hexo-renderer-marked 是 Hexo 默认自带的 Markdown 渲染器，此步可忽略
+``` bash
+npm install hexo-renderer-marked
+``` 
+之后更改根目录下的 _config.yml 配置
+``` bash
+post_asset_folder: true
+``` 
+安装 hexo-image-link
+``` bash
+npm install hexo-image-link --save
+``` 
+md文件语法参考：https://zhuanlan.zhihu.com/p/510453486
 
 ### Run server
 启动服务器：
